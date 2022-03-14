@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FilterGame</string>
+    <string name="play_button_text">Play!</string>
+    <string name="settings_button_text">Settings</string>
+    <string name="back_button_text">Back</string>
+    <string name="apply_button_text">Apply</string>
+    <string name="pressAgain_toast_text">!Нажмите ещё раз для выхода</string>
+</resources>
