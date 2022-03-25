@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    Intent intent_settings = new Intent(MainActivity.this, SettingsActivity.class);//открыть настройки
+                    Intent intent_settings = new Intent(MainActivity.this, SettingsActivity.class);//открыть настройки (PULL test)
                     startActivity(intent_settings);
                     finish();
                 }catch (Exception e){
