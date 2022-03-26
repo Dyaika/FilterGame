@@ -2,29 +2,49 @@ package com.example.filtergame;
 
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Filter {
     private int color;
     private int shape;
-
     public Filter(int color, int shape) {
+        setColorAndShape(color, shape);
+    }
+    public int getColor() {
+        return color;
+    }
+    public int getShape() {
+        return shape;
+    }
+    private void setColor(int color){
         if (color <= 3 && color >= 0){//0,1,2,3-синий, красный, зеленый, желтый
             this.color = color;
         }else{
             this.color = 4;//без цвета
         }
+    }
+    private void setShape(int shape){
         if (shape <= 3 && shape >= 0){
             this.shape = shape;//0,1,2,3-пар, жидкость, твердое, частицы
         }else{
             this.shape = 4;//без формы
         }
     }
-
-    public int getColor() {
-        return color;
+    private void setColorAndShape(int color, int shape){
+        setColor(color);
+        setShape(shape);
     }
-
-    public int getShape() {
-        return shape;
+    public void setColorAndShape(Filter filter){
+        setColorAndShape(filter.getColor(), filter.getShape());
+    }
+    public boolean isSameTo(Filter filter){
+        if (getColor() == filter.getColor()){
+            if (getShape() == filter.getShape()){
+                return true;
+            }
+        }
+        return false;
     }
     //задел для баффов
     public void trySetColor(int color) {
@@ -58,13 +78,19 @@ public class Filter {
         }
         return check;
     }
+    //Проверка фильтра на то что он пустота
     public boolean isSpace(){
         if (getColor() == 4 && getShape() == 0){
             return true;
         }
         return false;
     }
-    //Проверка матрицы на решаемость. Предполагается, что размеры и сами фильтры ее верны. Пусть пока будет здесь, потом перенесем
+    //Делает фильтр пустотой
+    public void makeSpace(){
+        this.shape = 4;
+        this.color = 4;
+    }
+
     //0123-индексы x
     //(0-пустые ячейки,1-верхние объекты, 2-фильтры, 3-лунки)
     //1111  4
@@ -72,11 +98,25 @@ public class Filter {
     //2220  2
     //2220  1
     //3333  0-индексы y
+    //Проверка матрицы на решаемость и корректность структуры. Предполагается, что размеры и сами фильтры ее верны. Пусть пока будет здесь, потом перенесем
 
+    //Проверка матрицы на стандартность фильтров. Предполагается, что размеры ее верны.
+    public static boolean standardizeMatrix(Filter[][] matrix, int height){
+        int width = 4;//ширина матрицы
+        boolean check = true;//вернет true если уже была стандартной
+        for (int y = 0; y < height; y++){
+            for (int x = 0; x < width; x++){
+                if (!matrix[x][y].isFilterCorrect()){
+                    check = false;
+                }
+            }
+        }
+        return check;
+    }
+    //проверка приведенной к стандарту фильтров матрицы на корректность структуры
     public static boolean isMatrixCorrect(Filter[][] matrix, int height){
         int width = 4;
         int width_count = 0, max_count = 0;//для подряд идущих не пустот
-        boolean check = true;//?
         for (int i = 0; i < width; i++){
             if (matrix[i][0].isSpace() || matrix[i][height - 1].isSpace()){//сверху и снизу не должно быть пустот
                 return false;
@@ -101,14 +141,14 @@ public class Filter {
             }
         }
 
-        return isMatrixSolvable(matrix, height);//проверка что матрица решится на 4/4
+        return true;
     }
-    //проверка на решаемость матрицы на 3 звезды
+    //проверка структурно верной матрицы на решаемость на 4/4
     public static boolean isMatrixSolvable(Filter[][] matrix, int height){//проверка что матрица решится на 4/4
         int width = 4;
         Filter[] row = new Filter[width];//строка проверки будет идти сверху вниз, нужна для зрения сквозь пустоты
         for (int i = 0; i < width; i++){
-            row[i] = matrix[i][height - 1];
+            row[i].setColorAndShape(matrix[i][height - 1]);
         }
         for (int y = height - 2; y >= 0; y--){
             for (int x = 0; x < width; width++){
@@ -116,23 +156,87 @@ public class Filter {
                     if(row[x].getShape() != matrix[x][y].getShape() && row[x].getColor() != matrix[x][y].getColor()){//ни цвет, ни форма не совпали
                         return false;
                     }
-                    row[x] = matrix[x][y];
+                    row[x].setColorAndShape(matrix[x][y]);
                 }
             }
         }
         return true;
     }
-    //Проверка матрицы на стандартность полей. Предполагается, что размеры ее верны. Пусть пока будет здесь, потом перенесем
-    public static boolean standardizeMatrix(Filter[][] matrix, int height){
-        int width = 4;//ширина матрицы
-        boolean check = true;//вернет true если уже была стандартной
-        for (int y = 0; y < height; y++){
-            for (int x = 0; x < width; x++){
-                if (!matrix[x][y].isFilterCorrect()){
-                    check = false;
-                }
+    //сдвиг указанного ряда матрицы вправо
+    public static boolean swipeToRight(Filter[][] matrix, int height, int row){//row - индекс ряда, который смещаем
+        int width = 4;
+        if (row >= height - 1 || row <= 0){//не из ряда фильтров
+            return false;
+        }
+        if (!matrix[width - 1][row].isSpace()){//уже и так справа
+            return false;
+        }
+        for (int x = width - 1; x > 0; x--){
+            matrix[x][row].setColorAndShape(matrix[x - 1][row]);
+        }
+        matrix[0][row].makeSpace();
+        return true;
+    }
+    //сдвиг указанного ряда матрицы влево
+    public static boolean swipeToLeft(Filter[][] matrix, int height, int row){//row - индекс ряда, который смещаем
+        int width = 4;
+        if (row >= height - 1 || row <= 0){//не из ряда фильтров
+            return false;
+        }
+        if (!matrix[0][row].isSpace()){//уже и так слева
+            return false;
+        }
+        for (int x = 0; x < width - 1; x++){
+            matrix[x][row].setColorAndShape(matrix[x + 1][row]);
+        }
+        matrix[width - 1][row].makeSpace();
+        return true;
+    }
+    //убирает блоки фильтров из матрицы решения и помещает их на матрицу склада
+    public static void shuffleMatrix(Filter[][] main_matrix, int main_height, Filter[][] storage_matrix){
+        int storage_height = 0, first_element_index = 0;
+        int main_width = 4, storage_width = 3;
+
+        ArrayList<Integer> row_numbers = new ArrayList<>();//храним номера
+        for (int i = 1; i < main_height - 1; i++){
+            row_numbers.add(i);
+        }
+        Collections.shuffle(row_numbers);//мешаем номера
+        for(int i: row_numbers){
+            if (main_matrix[0][i].isSpace()){
+                first_element_index = 1;
+            }else{
+                first_element_index = 0;
+            }
+            for (int x = 0; x < storage_width; x++){
+                storage_matrix[x][storage_height].setColorAndShape(main_matrix[first_element_index][i]);
+                main_matrix[first_element_index][i].makeSpace();
+                first_element_index++;
+            }
+            storage_height++;
+        }
+    }
+    //перемещает фильтр с поля игры наверх склада
+    public static boolean fromMainToStorage(Filter[][] main_matrix, int from_index, int main_height, Filter[][] storage_matrix, int to_index){
+        if (from_index > main_height - 2 || from_index < 1){//попытка вытащить не фильтр
+            return false;
+        }
+        int storage_width = 3, main_width = 4, first_element_index = 0;
+        if (main_matrix[0][from_index].isSpace()){//чтобы забирать фильтр без пустоты
+            first_element_index = 1;
+        }
+        for (int x = 0; x < storage_width; x++){
+            storage_matrix[x][to_index].setColorAndShape(main_matrix[first_element_index][from_index]);//запись в хранилище поверх остального
+            first_element_index++;
+        }
+        for (int y = from_index; y < main_height - 2; y++){
+            for (int x = 0; x < main_width; x++){
+                main_matrix[x][y].setColorAndShape(main_matrix[x][y+1]);//спуск остальных рядов игровой матрицы вниз
             }
         }
-        return check;
+        for (int x = 0; x < main_width; x++){
+            main_matrix[x][main_height - 1].makeSpace();
+        }
+        return true;
     }
 }
