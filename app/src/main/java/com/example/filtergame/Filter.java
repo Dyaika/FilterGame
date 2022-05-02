@@ -1,7 +1,5 @@
 package com.example.filtergame;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -9,7 +7,24 @@ public class Filter {
     private int color;
     private int shape;
     public Filter(int color, int shape) {
-        setColorAndShape(color, shape);
+        if (color <= 3 && color >= 0){//0,1,2,3-синий, красный, зеленый, желтый
+            this.color = color;
+        }else{
+            this.color = 4;//без цвета
+        }
+        if (shape <= 3 && shape >= 0){
+            this.shape = shape;//0,1,2,3-пар, жидкость, твердое, частицы
+        }else{
+            this.shape = 4;//без формы
+        }
+    }
+    public Filter(Filter filter){
+        this.color = filter.color;
+        this.shape = filter.shape;
+    }
+    public Filter() {
+        this.color = 4;
+        this.shape = 4;
     }
     public int getColor() {
         return color;
@@ -51,7 +66,7 @@ public class Filter {
         if (this.color == 4 && this.shape != 4) {
             this.color = color;
         }else{
-            Log.d("Filter", "There is no filter or it already has color");
+            System.out.println("There is no filter or it already has color");
         }
     }
     //задел для баффов
@@ -59,7 +74,7 @@ public class Filter {
         if (this.shape == 4 && this.color != 4) {
             this.shape = shape;
         }else{
-            Log.d("Filter", "There is no filter or it already has shape");
+            System.out.println("There is no filter or it already has shape");
         }
     }
     //Проверка фильтра на верность значений. Вернет true, если это фильтр или пустота, если нет - неверные поля заменятся на пустоты и вернет false
@@ -98,6 +113,10 @@ public class Filter {
     //2220  2
     //2220  1
     //3333  0-индексы y
+    //
+    //-matrix
+    //
+    //33332220222002221111 - string
     //Проверка матрицы на решаемость и корректность структуры. Предполагается, что размеры и сами фильтры ее верны. Пусть пока будет здесь, потом перенесем
 
     //Проверка матрицы на стандартность фильтров. Предполагается, что размеры ее верны.
@@ -237,6 +256,126 @@ public class Filter {
         for (int x = 0; x < main_width; x++){
             main_matrix[x][main_height - 1].makeSpace();
         }
+        return true;
+    }
+    //перемещает фильтр со склада наверх поля игры
+    public static boolean fromStorageToMain(Filter[][] main_matrix, int from_index, int storage_height, Filter[][] storage_matrix, int to_index){
+        if (from_index > storage_height - 1 || from_index < 1){//попытка вытащить не фильтр
+            return false;
+        }
+        int storage_width = 3, main_width = 4;
+        for (int x = 0; x < storage_width; x++){
+            main_matrix[x][to_index].setColorAndShape(storage_matrix[x][from_index]);//запись в поле игры поверх остального (сдвиг вправо)
+        }
+        for (int y = from_index; y < storage_height - 2; y++){
+            for (int x = 0; x < storage_width; x++){
+                storage_matrix[x][y].setColorAndShape(storage_matrix[x][y+1]);//спуск остальных рядов игровой матрицы вниз
+            }
+        }
+        for (int x = 0; x < storage_width; x++){
+            main_matrix[x][storage_height - 1].makeSpace();
+        }
+        return true;
+    }
+    //генерирует матрицу решения заданной высоты
+    public static void generateMatrix(Filter[][] matrix, int height){
+        int width = 4;
+        int[] change_color_chance = new int[width];//для того чтобы уровни выглядели более красивыми
+        for (int i = 0; i < width; i++){
+            change_color_chance[i] = 2;
+        }
+        ArrayList<Integer> excl_rand = new ArrayList<>();//чтобы 1 параметр гарантированно менялся
+        int start_index = 0;//чтобы определять положение дыры
+        Filter[] last_row = new Filter[4];//чтобы смотреть сквозь дыры
+        for (int i = 0; i < 4; i++){
+            last_row[i] = new Filter();
+        }
+        for (int x = 0; x < width; x++) {
+            matrix[x][0].setColorAndShape((int) Math.round(Math.random() * 3), (int) Math.round(Math.random() * 3));
+            last_row[x].setColorAndShape(matrix[x][0]);
+        }
+        for (int y = 1; y < height - 1; y++){
+            start_index = (int) Math.round(Math.random());
+            for (int x = start_index; x < width + start_index - 1; x++){// c 0 или с 1 до 3 или 4 соответственно
+                if((int) Math.round(Math.random() * 22) % change_color_chance[x] == 0){//если верно то меняется форма. цвет не меняется
+                    change_color_chance[x]++;//увеличиваем вероятность смены цвета (уменьшая шанс срабатываения условия)
+                    for (int i = 0; i < width; i++){
+                        if (i != last_row[x].getShape()){
+                            excl_rand.add(i);//будет массив без прошлого параметра
+                        }
+                    }
+                    matrix[x][y].setColorAndShape(last_row[x].getColor(), excl_rand.get((int) Math.round(Math.random() * 2)));
+                } else {
+                    change_color_chance[x] = 2;//возвращаем к начальному
+
+                    for (int i = 0; i < 4; i++){
+                        if (i != last_row[x].getColor()){
+                            excl_rand.add(i);//будет массив без прошлого параметра
+                        }
+                    }
+                    matrix[x][y].setColorAndShape( excl_rand.get((int) Math.round(Math.random() * 2)), last_row[x].getShape());
+                }
+                last_row[x].setColorAndShape(matrix[x][y]);
+                excl_rand.clear();
+            }
+        }
+        for(int x = 0; x < width; x++){
+            if((int) Math.round(Math.random() * 22) % change_color_chance[x] == 0){//если верно то меняется форма. цвет не меняется
+                for (int i = 0; i < width; i++){
+                    if (i != last_row[x].getShape()){
+                        excl_rand.add(i);//будет массив без прошлого параметра
+                    }
+                }
+                matrix[x][height - 1].setColorAndShape(last_row[x].getColor(), excl_rand.get((int) Math.round(Math.random() * 2)));
+            } else {
+                for (int i = 0; i < 4; i++){
+                    if (i != last_row[x].getColor()){
+                        excl_rand.add(i);//будет массив без прошлого параметра
+                    }
+                }
+                matrix[x][height - 1].setColorAndShape( excl_rand.get((int) Math.round(Math.random() * 2)), last_row[x].getShape());
+            }
+            last_row[x].setColorAndShape(matrix[x][height - 1]);
+            excl_rand.clear();
+        }
+    }
+    //делает из строки матрицу решения
+    public static boolean stringToMatrix(String string, Filter[][] matrix, int height){
+        int width = 4;
+        if (height * width * 2 != string.length()){
+            return false;
+        }
+        for (int y = 0; y < height; y++){
+            for (int x = 0; x < width; x++){
+                try {
+                    matrix[x][y].setColorAndShape(Integer.parseInt(string.substring(y * width + x, y * width + x + 1)), Integer.parseInt(string.substring(y * width + x + 1, y * width + x + 2)));
+                } catch (NumberFormatException e){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    //делает из матрицы решения строку
+    public static String matrixToString(Filter[][] matrix, int height){
+        String string = "";
+        int width = 4;
+        for (int y = 0; y < height; y++){
+            for (int x = 0; x < width; x++){
+                string +=  matrix[x][y].getColor() + "" + matrix[x][y].getShape();
+            }
+        }
+        return string;
+    }
+    //переставляет 2 элемента верхушки
+    public static boolean topSwap(Filter[][] matrix, int height, int first, int second){
+        int width = 4;
+        if (first >= 0 && first < width && second >= 0 && second < width){
+            return false;
+        }
+        Filter filter = new Filter(matrix[first][height - 1]);
+        matrix[first][height - 1].setColorAndShape(matrix[second][height - 1]);
+        matrix[second][height - 1].setColorAndShape(filter);
         return true;
     }
 }

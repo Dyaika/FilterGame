@@ -5,4 +5,5 @@
     <string name="back_button_text">Назад</string>
     <string name="apply_button_text">Применить</string>
     <string name="pressAgain_toast_text">Нажмите ещё раз для выхода</string>
+    <string name="hint_button_text" >Подсказка</string>
 </resources>

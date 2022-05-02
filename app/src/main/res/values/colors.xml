@@ -5,6 +5,10 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="purple_700_95">#F23700B3</color>
     <color name="purple_700_60">#9A3700B3</color>
+    <color name="sky_blue_100">#87CEEB</color>
+    <color name="grass_green_100">#2e700e</color>
+    <color name="tree_pit_33">#544C271C</color>
+    <color name="tree_pit_90">#E64C271C</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>

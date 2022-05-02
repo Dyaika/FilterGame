@@ -40,7 +40,7 @@ public class LevelsActivity extends AppCompatActivity {
                 }
             }
         });
-        TextView lvl1 = (TextView)findViewById(R.id.textView1);
+        TextView lvl1 = (TextView)findViewById(R.id.textViewHint);
         lvl1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

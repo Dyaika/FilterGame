@@ -5,4 +5,6 @@
     <string name="back_button_text">Back</string>
     <string name="apply_button_text">Apply</string>
     <string name="pressAgain_toast_text">!Нажмите ещё раз для выхода</string>
+    <string name="pause_button_text" translatable="false">l l</string>
+    <string name="hint_button_text" >Hint</string>
 </resources>
