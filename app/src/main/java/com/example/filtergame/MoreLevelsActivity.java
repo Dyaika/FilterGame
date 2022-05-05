@@ -1,0 +1,30 @@
+package com.example.filtergame;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MoreLevelsActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_more_levels);
+        Window window = getWindow();
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        try{
+            Intent back_sys_intent = new Intent(MoreLevelsActivity.this, LevelsActivity.class);
+            startActivity(back_sys_intent);
+            finish();
+        }catch (Exception e){
+
+        }
+    }
+}

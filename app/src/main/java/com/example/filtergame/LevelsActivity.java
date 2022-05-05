@@ -40,7 +40,7 @@ public class LevelsActivity extends AppCompatActivity {
                 }
             }
         });
-        TextView lvl1 = (TextView)findViewById(R.id.textViewHint);
+        TextView lvl1 = (TextView)findViewById(R.id.lvl1);
         lvl1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +51,16 @@ public class LevelsActivity extends AppCompatActivity {
                 }catch (Exception e){
 
                 }
+            }
+        });
+        TextView more_levels = (TextView)findViewById(R.id.moreLevels);
+        more_levels.setOnClickListener(v -> {
+            try{
+                Intent more_levels_intent = new Intent(LevelsActivity.this, MoreLevelsActivity.class);
+                startActivity(more_levels_intent);
+                finish();
+            }catch (Exception e){
+
             }
         });
         Window window = getWindow();
