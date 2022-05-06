@@ -6,8 +6,12 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class MoreLevelsActivity extends AppCompatActivity {
+
+    private RecyclerView levelsRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +19,7 @@ public class MoreLevelsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_more_levels);
         Window window = getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //initRecyclerView();
     }
     @Override
     public void onBackPressed() {
@@ -26,5 +31,10 @@ public class MoreLevelsActivity extends AppCompatActivity {
         }catch (Exception e){
 
         }
+    }
+
+    private void initRecyclerView(){
+        //levelsRecyclerView = findViewById(R.id.levels_recycler_view);
+        levelsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

@@ -9,4 +9,7 @@
     <string name="more_levels_button_text" >Больше уровней</string>
     <string name="random_level_button_text" >Создать случайный уровень</string>
     <string name="custom_level_button_text" >Добавить свой уровень</string>
+    <string name="username_text" >Пользователь:</string>
+    <string name="height_text" >Высота:</string>
+    <string name="views_text" >Просмотры:</string>
 </resources>

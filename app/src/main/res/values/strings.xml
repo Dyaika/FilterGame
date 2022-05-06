@@ -10,4 +10,7 @@
     <string name="more_levels_button_text" >More levels</string>
     <string name="random_level_button_text" >Generate random level</string>
     <string name="custom_level_button_text" >Add custom level</string>
+    <string name="username_text" >User:</string>
+    <string name="height_text" >Height:</string>
+    <string name="views_text" >Views:</string>
 </resources>
