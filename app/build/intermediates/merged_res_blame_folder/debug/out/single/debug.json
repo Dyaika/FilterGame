@@ -20,12 +20,12 @@
         "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\style_blue_sky.xml"
     },
     {
-        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_style_btn_lvl_95.xml.flat",
         "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\style_btn_lvl_95.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",

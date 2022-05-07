@@ -2077,7 +2077,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
 id imageViewTreeBcgr
 id immediateStop
 id included
@@ -2227,6 +2226,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id playImageView
 id play_btn_field
 id position
 id postLayout

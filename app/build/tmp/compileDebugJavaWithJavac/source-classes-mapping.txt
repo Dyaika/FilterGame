@@ -19,3 +19,6 @@ com/example/filtergame/LevelsActivity.java
  com.example.filtergame.LevelsActivity
  com.example.filtergame.LevelsActivity$1
  com.example.filtergame.LevelsActivity$2
+com/example/filtergame/adapter/ServerLevelAdapter.java
+ com.example.filtergame.adapter.ServerLevelAdapter
+ com.example.filtergame.adapter.ServerLevelAdapter$ServerLevelViewHolder
