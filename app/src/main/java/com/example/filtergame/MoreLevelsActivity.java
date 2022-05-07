@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,7 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MoreLevelsActivity extends AppCompatActivity {
 
     private RecyclerView levelsRecyclerView;
-
+    private TextView randomText;
+    private TextView addText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +22,8 @@ public class MoreLevelsActivity extends AppCompatActivity {
         Window window = getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //initRecyclerView();
+        randomText = findViewById(R.id.random);
+        addText = findViewById(R.id.add);
     }
     @Override
     public void onBackPressed() {
@@ -34,7 +38,7 @@ public class MoreLevelsActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView(){
-        //levelsRecyclerView = findViewById(R.id.levels_recycler_view);
+        levelsRecyclerView = findViewById(R.id.server_levels_recycler_view);
         levelsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

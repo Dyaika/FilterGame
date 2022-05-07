@@ -1,0 +1,21 @@
+com/example/filtergame/SettingsActivity.java
+ com.example.filtergame.SettingsActivity
+ com.example.filtergame.SettingsActivity$1
+com/example/filtergame/Level1Activity.java
+ com.example.filtergame.Level1Activity
+pojo/ServerLevel.java
+ pojo.ServerLevel
+com/example/filtergame/BuildConfig.java
+ com.example.filtergame.BuildConfig
+com/example/filtergame/MoreLevelsActivity.java
+ com.example.filtergame.MoreLevelsActivity
+com/example/filtergame/Filter.java
+ com.example.filtergame.Filter
+com/example/filtergame/MainActivity.java
+ com.example.filtergame.MainActivity
+ com.example.filtergame.MainActivity$1
+ com.example.filtergame.MainActivity$2
+com/example/filtergame/LevelsActivity.java
+ com.example.filtergame.LevelsActivity
+ com.example.filtergame.LevelsActivity$1
+ com.example.filtergame.LevelsActivity$2

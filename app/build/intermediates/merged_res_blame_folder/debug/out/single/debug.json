@@ -1,0 +1,146 @@
+[
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_gamelevels.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\button_gamelevels.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_style_green_grass.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\style_green_grass.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_bcgr_2.png.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\bcgr_2.png"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_style_blue_sky.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\style_blue_sky.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_style_btn_lvl_95.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\style_btn_lvl_95.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_mini_top.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\button_mini_top.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_levels.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\layout\\activity_levels.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_settings.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_multi_level.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\layout\\activity_multi_level.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_style_mini_btn_90.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\style_mini_btn_90.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_style_btn_lvl_60.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\style_btn_lvl_60.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_style_my_green_server_levels.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\style_my_green_server_levels.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_metal.jpg.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\metal.jpg"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_style_mini_btn_33.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\style_mini_btn_33.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_play_icon3.png.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\play_icon3.png"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_cloud.png.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\cloud.png"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\layout_server_level_item_view.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\layout\\server_level_item_view.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_style_pit.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\style_pit.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_bcgr_3.png.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\bcgr_3.png"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_more_levels.xml.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\layout\\activity_more_levels.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_bcgr.png.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\bcgr.png"
+    }
+]

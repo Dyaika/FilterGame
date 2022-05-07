@@ -1,0 +1,116 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.filtergame"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:4:5-66
+11-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:4:22-64
+12
+13    <application
+13-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:5:5-58:19
+14        android:allowBackup="true"
+14-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:6:9-35
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.5.0] C:\Users\Razch\.gradle\caches\transforms-3\97e7ec19bd11dff7ae3d399ac9d0fa5b\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+16        android:debuggable="true"
+17        android:icon="@mipmap/ic_launcher"
+17-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:7:9-43
+18        android:label="@string/app_name"
+18-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:8:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:9:9-54
+20        android:supportsRtl="true"
+20-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:10:9-35
+21        android:testOnly="true"
+22        android:theme="@style/Theme.FilterGame" >
+22-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:11:9-48
+23        <activity
+23-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:12:9-21:20
+24            android:name="com.example.filtergame.MainActivity"
+24-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:13:13-41
+25            android:exported="true"
+25-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:15:13-36
+26            android:screenOrientation="landscape" >
+26-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:14:13-50
+27            <intent-filter>
+27-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:16:13-20:29
+28                <action android:name="android.intent.action.MAIN" />
+28-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:17:17-69
+28-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:17:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:19:17-77
+30-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:19:27-74
+31            </intent-filter>
+32        </activity>
+33        <activity
+33-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:22:9-30:20
+34            android:name="com.example.filtergame.LevelsActivity"
+34-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:23:13-43
+35            android:exported="true"
+35-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:25:13-36
+36            android:screenOrientation="landscape" >
+36-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:24:13-50
+37            <intent-filter>
+37-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:26:13-29:29
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:19:17-77
+38-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:19:27-74
+39            </intent-filter>
+40        </activity>
+41        <activity
+41-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:31:9-39:20
+42            android:name="com.example.filtergame.SettingsActivity"
+42-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:32:13-45
+43            android:exported="true"
+43-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:34:13-36
+44            android:screenOrientation="landscape" >
+44-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:33:13-50
+45            <intent-filter>
+45-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:26:13-29:29
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:19:17-77
+46-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:19:27-74
+47            </intent-filter>
+48        </activity>
+49        <activity
+49-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:40:9-48:20
+50            android:name="com.example.filtergame.Level1Activity"
+50-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:41:13-43
+51            android:exported="true"
+51-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:43:13-36
+52            android:screenOrientation="landscape" >
+52-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:42:13-50
+53            <intent-filter>
+53-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:26:13-29:29
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:19:17-77
+54-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:19:27-74
+55            </intent-filter>
+56        </activity>
+57        <activity
+57-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:49:9-57:20
+58            android:name="com.example.filtergame.MoreLevelsActivity"
+58-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:50:13-47
+59            android:exported="true"
+59-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:52:13-36
+60            android:screenOrientation="landscape" >
+60-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:51:13-50
+61            <intent-filter>
+61-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:26:13-29:29
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:19:17-77
+62-->D:\MyFiles\program\java\FilterGame\app\src\main\AndroidManifest.xml:19:27-74
+63            </intent-filter>
+64        </activity>
+65    </application>
+66
+67</manifest>
