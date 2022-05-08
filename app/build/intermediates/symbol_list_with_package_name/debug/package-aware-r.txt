@@ -1783,6 +1783,9 @@ drawable avd_show_password
 drawable bcgr
 drawable bcgr_2
 drawable bcgr_3
+drawable blank
+drawable blue_bot
+drawable blue_top
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1799,6 +1802,12 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable filter_bot
+drawable filter_top
+drawable fluid_bot
+drawable fluid_top
+drawable green_bot
+drawable green_top
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -1807,6 +1816,8 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ice_bot
+drawable ice_top
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1841,7 +1852,14 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable parts_bot
+drawable parts_top
 drawable play_icon3
+drawable red_bot
+drawable red_top
+drawable right_bot
+drawable steam_bot
+drawable steam_top
 drawable style_blue_sky
 drawable style_btn_lvl_60
 drawable style_btn_lvl_95
@@ -1853,6 +1871,9 @@ drawable style_pit
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable wrong_bot
+drawable yellow_bot
+drawable yellow_top
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1951,6 +1972,10 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id boxImageView4_0
+id boxImageView4_1
+id boxImageView4_2
+id boxImageView4_3
 id buttonPanel
 id button_back
 id button_play
@@ -1980,6 +2005,10 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id colorImageView4_0
+id colorImageView4_1
+id colorImageView4_2
+id colorImageView4_3
 id confirm_button
 id constraint
 id container
@@ -2043,6 +2072,10 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id f4_0
+id f4_1
+id f4_2
+id f4_3
 id fade
 id fill
 id fill_horizontal
@@ -2267,6 +2300,10 @@ id select_dialog_listview
 id selected
 id selection_type
 id server_levels_recycler_view
+id shapeImageView4_0
+id shapeImageView4_1
+id shapeImageView4_2
+id shapeImageView4_3
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -2472,6 +2509,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout main_matrix_item
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2592,6 +2630,7 @@ string hide_bottom_view_on_scroll_behavior
 string hint_button_text
 string icon_content_description
 string item_view_role_description
+string level_corrupted
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection

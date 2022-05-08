@@ -54,9 +54,9 @@ public class MoreLevelsActivity extends AppCompatActivity {
 
     private Collection<ServerLevel> getLevels(){
         return Arrays.asList(
-                new ServerLevel(1L, "Dyaika", "10 06 2003", 11, 12, "123242422141204012041"),
-                new ServerLevel(2L, "Edward", "12 02 2009", 12, -2, "1232342132432141204012041"),
-                new ServerLevel(3L, "Albert", "0 12 2077", 11, 99990, "1232424533212041")
+                new ServerLevel(1L, "Dyaika", "10 06 2003", 7, 12, "30013213443130113132104444222010323210443122124411122230"),
+                new ServerLevel(2L, "Edward", "12 02 2009", 4, -2, "10113100303121443333114431301310"),
+                new ServerLevel(3L, "Albert", "0 12 2077", 25, 99990, "11221222442132214423301112032044023330443213324412120244442212124423321144213101323130444433320202231244122102444423222244202021441030203220324444223110121233440211134444211212030122443331234431321322")
         );
     }
 

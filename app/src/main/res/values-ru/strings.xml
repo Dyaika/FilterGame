@@ -12,4 +12,5 @@
     <string name="username_text" >Пользователь:</string>
     <string name="height_text" >Высота:</string>
     <string name="views_text" >Просмотры:</string>
+    <string name="level_corrupted" >Этот уровень некорректен</string>
 </resources>

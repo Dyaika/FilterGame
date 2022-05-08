@@ -12,4 +12,5 @@
     <string name="username_text" >!User:</string>
     <string name="height_text" >!Height:</string>
     <string name="views_text" >!Views:</string>
+    <string name="level_corrupted" >!This level is corrupted</string>
 </resources>
