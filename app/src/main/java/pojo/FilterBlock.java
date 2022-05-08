@@ -10,6 +10,7 @@ public class FilterBlock {
         this.width = width;
         filterBlock = new Filter[width];
         for (int x = 0; x < width; x++){
+            filterBlock[x] = new Filter();
             filterBlock[x].setColorAndShape(matrix[x][cur_height]);
         }
         this.height = height;
@@ -20,6 +21,12 @@ public class FilterBlock {
         for (int x = 0; x < width; x++){
             filterBlock[x].setColorAndShape(matrix[x][cur_height]);
         }
+    }
+    public void updateFilterBlock(Filter[][] matrix, int cur_height) {//костыль для List
+        for (int x = 0; x < width; x++){
+            filterBlock[x].setColorAndShape(matrix[x][cur_height]);
+        }
+        this.cur_height = cur_height;
     }
 
     public int getShape(int x){
@@ -38,5 +45,13 @@ public class FilterBlock {
     }
     public int getColor(int x){
         return filterBlock[x].getColor();
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getCur_height() {
+        return cur_height;
     }
 }

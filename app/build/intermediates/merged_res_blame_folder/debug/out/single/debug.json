@@ -28,6 +28,10 @@
         "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\filter_bot.png"
     },
     {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_right_top.png.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\right_top.png"
+    },
+    {
         "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_levels.xml.flat",
         "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\layout\\activity_levels.xml"
     },
@@ -150,6 +154,10 @@
     {
         "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_style_mini_btn_90.xml.flat",
         "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\style_mini_btn_90.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_wrong_top.png.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\wrong_top.png"
     },
     {
         "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_yellow_top.png.flat",
