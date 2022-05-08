@@ -223,6 +223,22 @@ public class Filter {
         int erased = 0;
         int cur = 0;
         Collections.shuffle(row_numbers);//мешаем номера
+
+        for(int i: row_numbers){
+            if (main_matrix[0][i].isSpace()){
+                first_element_index = 1;
+            }else{
+                first_element_index = 0;
+            }
+            for (int x = 0; x < storage_width; x++){
+                storage_matrix[x][storage_height].setColorAndShape(main_matrix[first_element_index][i]);
+                main_matrix[first_element_index][i].makeSpace();
+                first_element_index++;
+            }
+            storage_height++;
+        }
+
+        /*
         for(int i: row_numbers){
             if (i > main_height - 2 - erased){
                 fromMainToStorage(main_matrix, i - erased, main_height, storage_matrix, erased);
@@ -230,7 +246,7 @@ public class Filter {
                 fromMainToStorage(main_matrix, i, main_height, storage_matrix, erased);
             }
             erased++;
-        }
+        }*/
     }
     //перемещает фильтр с поля игры наверх склада
     public static boolean fromMainToStorage(Filter[][] main_matrix, int from_index, int main_height, Filter[][] storage_matrix, int to_index){
