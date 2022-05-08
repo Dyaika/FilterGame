@@ -75,7 +75,7 @@ public class Level1Activity extends AppCompatActivity {
             }
         }
         //пока уровень полностью решен, теперь сделаем его играбельным
-        Filter.shuffleMatrix(main_matrix, main_height, storage_matrix);
+        //Filter.shuffleMatrix(main_matrix, main_height, storage_matrix);//временно убрал для слежки за отображением матрицы
         Log.d("MX", "matrixes were shuffled");
         //теперь надо его отобразить
         initRecyclerViews();
@@ -103,7 +103,7 @@ public class Level1Activity extends AppCompatActivity {
     private Collection<FilterBlock> getFilterBlocks4(int height, Filter[][] main_matrix){
         List<FilterBlock> fb = new ArrayList<>();
         Log.d("RecV", "main matrix list for rv was made");
-        for(int y = 0; y < height; y++) {
+        for(int y = height - 1; y >= 0; y--) {//бред костыль поменять или переделать все
 
             Log.d("RecV", "main matrix elem added - " + y);
             fb.add(new FilterBlock(height, y, 4, main_matrix));

@@ -1,7 +1,5 @@
-com/example/filtergame/LevelsActivity.java
- com.example.filtergame.LevelsActivity
- com.example.filtergame.LevelsActivity$1
- com.example.filtergame.LevelsActivity$2
+pojo/FilterBlock.java
+ pojo.FilterBlock
 com/example/filtergame/SettingsActivity.java
  com.example.filtergame.SettingsActivity
  com.example.filtergame.SettingsActivity$1
@@ -25,5 +23,7 @@ pojo/Filter.java
  pojo.Filter
 com/example/filtergame/Level1Activity.java
  com.example.filtergame.Level1Activity
-pojo/FilterBlock.java
- pojo.FilterBlock
+com/example/filtergame/LevelsActivity.java
+ com.example.filtergame.LevelsActivity
+ com.example.filtergame.LevelsActivity$1
+ com.example.filtergame.LevelsActivity$2
