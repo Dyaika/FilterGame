@@ -6,6 +6,7 @@
     <string name="apply_button_text">Применить</string>
     <string name="pressAgain_toast_text">Нажмите ещё раз для выхода</string>
     <string name="hint_button_text" >Подсказка</string>
+    <string name="check_button_text" >Проверить</string>
     <string name="more_levels_button_text" >Больше уровней</string>
     <string name="random_level_button_text" >Создать случайный уровень</string>
     <string name="custom_level_button_text" >Добавить свой уровень</string>
@@ -13,4 +14,5 @@
     <string name="height_text" >Высота:</string>
     <string name="views_text" >Просмотры:</string>
     <string name="level_corrupted" >Этот уровень некорректен</string>
+    <string name="storage_isnt_null" >В хранилище еще есть блоки</string>
 </resources>

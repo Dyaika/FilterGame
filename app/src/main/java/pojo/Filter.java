@@ -167,6 +167,7 @@ public class Filter {
         int width = 4;
         Filter[] row = new Filter[width];//строка проверки будет идти сверху вниз, нужна для зрения сквозь пустоты
         for (int i = 0; i < width; i++){
+            row[i] = new Filter();
             row[i].setColorAndShape(matrix[i][height - 1]);
         }
         for (int y = height - 2; y >= 0; y--){
@@ -181,6 +182,30 @@ public class Filter {
         }
         return true;
     }
+
+    //в переданный массив записывет id высшего правильного элемента в каждом столбце
+    public static void checkForWinHeight(Filter[][] matrix, int height, int[] winHeight){//проверка что матрица решится на 4/4
+        int width = 4;
+        for (int x = 0; x < width; x++){
+            winHeight[x] = 0;//по умолчанию решено верно
+        }
+        Filter[] row = new Filter[width];//строка проверки будет идти сверху вниз, нужна для зрения сквозь пустоты
+        for (int i = 0; i < width; i++){
+            row[i] = new Filter();
+            row[i].setColorAndShape(matrix[i][height - 1]);
+        }
+        for (int y = height - 2; y >= 0; y--){
+            for (int x = 0; x < width; width++){
+                if(!matrix[x][y].isSpace()){
+                    if(row[x].getShape() != matrix[x][y].getShape() && row[x].getColor() != matrix[x][y].getColor() && winHeight[x] == 0){//ни цвет, ни форма не совпали и это первая сверху ошибка
+                        winHeight[x] = y + 1;
+                    }
+                    row[x].setColorAndShape(matrix[x][y]);
+                }
+            }
+        }
+    }
+
     //сдвиг указанного ряда матрицы вправо
     public static boolean swipeToRight(Filter[][] matrix, int height, int row){//row - индекс ряда, который смещаем
         int width = 4;

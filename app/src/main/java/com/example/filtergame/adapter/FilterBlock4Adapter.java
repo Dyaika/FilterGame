@@ -48,14 +48,16 @@ public class FilterBlock4Adapter extends RecyclerView.Adapter<FilterBlock4Adapte
 
     class FilterBlock4ViewHolder extends RecyclerView.ViewHolder{
         private boolean checking;//флаг для понимания, нажали ли мы кнопку проверки
-        private int winHeight;//высота начиная с которой все фильтры правильно стоят
+        private int[] winHeight;//высота начиная с которой все фильтры правильно стоят
         private ImageView[] boxImg = new ImageView[4];
         private ImageView[] shapeImg = new ImageView[4];
         private ImageView[] colorImg = new ImageView[4];
 
-        public void startChecking(boolean b, int winHeight){
+        public void startChecking(boolean b, int[] winHeight){
             checking = b;
-            this.winHeight = winHeight;
+            for (int x = 0; x < 4; x++) {
+                this.winHeight[x] = winHeight[x];///возможно тут ошибка
+            }
         }
         public void bind(FilterBlock filterBlock){
             for (int x = 0; x < 4; x++){
@@ -65,7 +67,7 @@ public class FilterBlock4Adapter extends RecyclerView.Adapter<FilterBlock4Adapte
                     shapeImg[x].setImageResource(R.drawable.blank);//очень не уверен что альфа
                 } else {
                     if (checking){
-                        switch (filterBlock.getShape(x, winHeight)){
+                        switch (filterBlock.getShape(x, winHeight[x])){
                             case 7:
                                 if (filterBlock.getCur_height() == filterBlock.getHeight() - 1){
                                     shapeImg[x].setImageResource(R.drawable.right_top);
@@ -178,8 +180,11 @@ public class FilterBlock4Adapter extends RecyclerView.Adapter<FilterBlock4Adapte
 
         public FilterBlock4ViewHolder(View itemView) {
             super(itemView);
-            checking = false;
-            winHeight = 0;
+            winHeight = new int[4];
+            checking = false;//балуюсь, должно быть фолс
+            for (int i = 0; i < 4; i++) {
+                winHeight[i] = 0;
+            }
             boxImg[0] = itemView.findViewById(R.id.boxImageView4_0);
             boxImg[1] = itemView.findViewById(R.id.boxImageView4_1);
             boxImg[2] = itemView.findViewById(R.id.boxImageView4_2);

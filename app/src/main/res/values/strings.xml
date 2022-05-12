@@ -7,6 +7,7 @@
     <string name="pressAgain_toast_text">!Нажмите ещё раз для выхода</string>
     <string name="pause_button_text" translatable="false">l l</string>
     <string name="hint_button_text" >Hint</string>
+    <string name="check_button_text" >Check</string>
     <string name="more_levels_button_text" >More levels</string>
     <string name="random_level_button_text" >Generate random level</string>
     <string name="custom_level_button_text" >Add custom level</string>
@@ -14,4 +15,5 @@
     <string name="height_text" >Height:</string>
     <string name="views_text" >Views:</string>
     <string name="level_corrupted" >This level is corrupted</string>
+    <string name="storage_isnt_null" >There are still some blocks in storage</string>
 </resources>

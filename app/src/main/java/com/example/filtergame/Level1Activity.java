@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +30,11 @@ public class Level1Activity extends AppCompatActivity {
     private ServerLevel lv;
     private RecyclerView filterBlock4RecyclerView, filterBlock3RecyclerView;
     private FilterBlock4Adapter filterBlock4Adapter;
-
+    private int storage_cur_height;
+    private int [] winHeight;
+    private Filter[][] solution_matrix;
+    private Filter[][] main_matrix;
+    private Filter[][] storage_matrix;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +46,9 @@ public class Level1Activity extends AppCompatActivity {
         //
         int main_height = lv.getHeight();
         int storage_height = main_height - 2;
-        Filter[][] solution_matrix = new Filter[4][main_height];
-        Filter[][] main_matrix = new Filter[4][main_height];
-        Filter[][] storage_matrix = new Filter[3][main_height - 2];
+        solution_matrix = new Filter[4][main_height];
+        main_matrix = new Filter[4][main_height];
+        storage_matrix = new Filter[3][main_height - 2];
         Log.d("MX", "matrixes were made");
         for(int j = 0; j < main_height; j++) {
             for (int i = 0; i < 4; i++) {
@@ -56,6 +61,7 @@ public class Level1Activity extends AppCompatActivity {
                 storage_matrix[i][j] = new Filter();
             }
         }
+        Toast toast = new Toast(this);
         Log.d("MX", "matrixes were set");
         //заполним матрицу решения и игровое поле данными из строки
         if(Filter.stringToMatrix(lv.getSolution_matrix_str(), main_matrix, main_height)){
@@ -64,7 +70,6 @@ public class Level1Activity extends AppCompatActivity {
         } else {
             Log.d("MX", "matrixes were not filled");
             try{
-                Toast toast = new Toast(this);
                 toast.setText(R.string.level_corrupted);
                 toast.show();
                 Intent back_sys_intent = new Intent(Level1Activity.this, LevelsActivity.class);
@@ -76,12 +81,42 @@ public class Level1Activity extends AppCompatActivity {
         }
         //пока уровень полностью решен, теперь сделаем его играбельным
         //Filter.shuffleMatrix(main_matrix, main_height, storage_matrix);//временно убрал для слежки за отображением матрицы
+        storage_cur_height = storage_height;//не индекс а именно высота
+        int mainCurHeight = 2;//не индекс а высота
         Log.d("MX", "matrixes were shuffled");
         //теперь надо его отобразить
         initRecyclerViews();
         Log.d("RecV", "main matrix recycler view was initialized");
         loadFilterBlocks4(main_height, main_matrix);
         Log.d("RecV", "main matrix recycler view was filled with blocks");
+        winHeight = new int[4];
+        for (int x = 0; x < 4; x++){
+            winHeight[x] = 0;
+        }
+        TextView checkBtn = findViewById(R.id.textViewCheck);
+        storage_cur_height = 0;
+        checkBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (storage_cur_height == 0){
+                    Thread thread = new Thread(){
+                        @Override
+                        public void run() {
+                            Filter.checkForWinHeight(main_matrix, main_height, winHeight);
+                        }
+                    };
+                    thread.start();
+                    checkBtn.setText(winHeight[0] + " " + winHeight[1] + " " +winHeight[2] + " " + winHeight[3]);
+
+                } else {
+                    toast.setText(R.string.storage_isnt_null);
+                    toast.show();
+                }
+            }
+        });
+
+
+
     }
 
     private void initRecyclerViews(){

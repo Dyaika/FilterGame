@@ -22,12 +22,6 @@ public class FilterBlock {
             filterBlock[x].setColorAndShape(matrix[x][cur_height]);
         }
     }
-    public void updateFilterBlock(Filter[][] matrix, int cur_height) {//костыль для List
-        for (int x = 0; x < width; x++){
-            filterBlock[x].setColorAndShape(matrix[x][cur_height]);
-        }
-        this.cur_height = cur_height;
-    }
 
     public int getShape(int x){
         return filterBlock[x].getShape();
