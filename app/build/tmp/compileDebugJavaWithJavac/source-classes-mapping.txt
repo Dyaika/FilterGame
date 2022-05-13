@@ -1,5 +1,5 @@
-pojo/FilterBlock.java
- pojo.FilterBlock
+pojo/Filter.java
+ pojo.Filter
 com/example/filtergame/SettingsActivity.java
  com.example.filtergame.SettingsActivity
  com.example.filtergame.SettingsActivity$1
@@ -12,6 +12,9 @@ com/example/filtergame/BuildConfig.java
  com.example.filtergame.BuildConfig
 com/example/filtergame/MoreLevelsActivity.java
  com.example.filtergame.MoreLevelsActivity
+com/example/filtergame/adapter/FilterBlock3Adapter.java
+ com.example.filtergame.adapter.FilterBlock3Adapter
+ com.example.filtergame.adapter.FilterBlock3Adapter$FilterBlock3ViewHolder
 com/example/filtergame/adapter/FilterBlock4Adapter.java
  com.example.filtergame.adapter.FilterBlock4Adapter
  com.example.filtergame.adapter.FilterBlock4Adapter$FilterBlock4ViewHolder
@@ -19,8 +22,8 @@ com/example/filtergame/MainActivity.java
  com.example.filtergame.MainActivity
  com.example.filtergame.MainActivity$1
  com.example.filtergame.MainActivity$2
-pojo/Filter.java
- pojo.Filter
+pojo/FilterBlock.java
+ pojo.FilterBlock
 com/example/filtergame/Level1Activity.java
  com.example.filtergame.Level1Activity
  com.example.filtergame.Level1Activity$1

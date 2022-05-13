@@ -68,12 +68,12 @@
         "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\drawable\\ice_top.png"
     },
     {
-        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "D:\\MyFiles\\program\\java\\FilterGame\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
         "merged": "D:\\MyFiles\\program\\java\\FilterGame\\app\\build\\intermediates\\merged_res\\debug\\drawable_filter_top.png.flat",
